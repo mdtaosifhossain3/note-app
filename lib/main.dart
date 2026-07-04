@@ -1,15 +1,10 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'firebase_options.dart';
-import 'screens/notes_list_screen.dart';
+import 'screens/splash_screen.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
   runApp(const NoteApp());
 }
 
@@ -22,7 +17,7 @@ class NoteApp extends StatelessWidget {
       title: 'Notes',
       debugShowCheckedModeBanner: false,
       theme: _buildTheme(),
-      home: const NotesListScreen(),
+      home: const SplashScreen(),
     );
   }
 

@@ -21,8 +21,9 @@ class NoteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
-    final formattedDate =
-        DateFormat('MMM d, yyyy  h:mm a').format(note.updatedAt);
+    final formattedDate = DateFormat(
+      'MMM d, yyyy  h:mm a',
+    ).format(note.updatedAt);
 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -30,19 +31,19 @@ class NoteCard extends StatelessWidget {
         gradient: LinearGradient(
           colors: [
             scheme.surfaceContainerHighest,
-            scheme.surfaceContainerHighest.withOpacity(0.75),
+            scheme.surfaceContainerHighest.withValues(alpha: 0.75),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: scheme.primary.withOpacity(0.25),
+          color: scheme.primary.withValues(alpha: 0.25),
           width: 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.3),
+            color: Colors.black.withValues(alpha: 0.3),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -133,7 +134,7 @@ class NoteCard extends StatelessWidget {
                     Icon(
                       Icons.access_time_rounded,
                       size: 13,
-                      color: scheme.primary.withOpacity(0.7),
+                      color: scheme.primary.withValues(alpha: 0.7),
                     ),
                     const SizedBox(width: 4),
                     Text(

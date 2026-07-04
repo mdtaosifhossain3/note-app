@@ -21,7 +21,7 @@ class NotesListScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: scheme.primary.withOpacity(0.15),
+                color: scheme.primary.withValues(alpha: 0.15),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Icon(Icons.notes_rounded, color: scheme.primary, size: 22),
@@ -50,10 +50,10 @@ class NotesListScreen extends StatelessWidget {
                     vertical: 6,
                   ),
                   decoration: BoxDecoration(
-                    color: scheme.primary.withOpacity(0.15),
+                    color: scheme.primary.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
-                      color: scheme.primary.withOpacity(0.3),
+                      color: scheme.primary.withValues(alpha: 0.3),
                     ),
                   ),
                   child: Text(
@@ -180,14 +180,12 @@ class NotesListScreen extends StatelessWidget {
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(
-              'Note deleted',
-              style: GoogleFonts.outfit(),
-            ),
+            content: Text('Note deleted', style: GoogleFonts.outfit()),
             backgroundColor: const Color(0xFFE57373),
             behavior: SnackBarBehavior.floating,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
           ),
         );
       }
@@ -210,13 +208,13 @@ class _EmptyView extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(28),
             decoration: BoxDecoration(
-              color: primaryColor.withOpacity(0.1),
+              color: primaryColor.withValues(alpha: 0.1),
               shape: BoxShape.circle,
             ),
             child: Icon(
               Icons.note_add_outlined,
               size: 64,
-              color: primaryColor.withOpacity(0.7),
+              color: primaryColor.withValues(alpha: 0.7),
             ),
           ),
           const SizedBox(height: 24),
@@ -231,10 +229,7 @@ class _EmptyView extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             'Tap the button below to create your first note',
-            style: GoogleFonts.outfit(
-              fontSize: 14,
-              color: Colors.white38,
-            ),
+            style: GoogleFonts.outfit(fontSize: 14, color: Colors.white38),
             textAlign: TextAlign.center,
           ),
         ],
