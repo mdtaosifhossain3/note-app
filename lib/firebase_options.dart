@@ -37,33 +37,31 @@ class DefaultFirebaseOptions {
   }
 
   // ⚠️ Replace the values below with your actual Firebase project config.
+
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'YOUR-API-KEY',
-    appId: 'YOUR-APP-ID',
-    messagingSenderId: 'YOUR-SENDER-ID',
-    projectId: 'YOUR-PROJECT-ID',
-    authDomain: 'YOUR-PROJECT-ID.firebaseapp.com',
-    storageBucket: 'YOUR-PROJECT-ID.appspot.com',
+    apiKey: 'AIzaSyCv27ccqwBVP57JujM4XBVZa-f6RP7bQvQ',
+    appId: '1:8490898537:web:666b1787dbaa83468e3ef8',
+    messagingSenderId: '8490898537',
+    projectId: 'note-app-ffa71',
+    authDomain: 'note-app-ffa71.firebaseapp.com',
+    storageBucket: 'note-app-ffa71.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'YOUR-API-KEY',
-    appId: 'YOUR-APP-ID',
-    messagingSenderId: 'YOUR-SENDER-ID',
-    projectId: 'YOUR-PROJECT-ID',
-    storageBucket: 'YOUR-PROJECT-ID.appspot.com',
+    apiKey: 'AIzaSyACqtOuFp1vp0xS8bKtxHi1_22HjTaFLno',
+    appId: '1:8490898537:android:38e2d546deb3a0478e3ef8',
+    messagingSenderId: '8490898537',
+    projectId: 'note-app-ffa71',
+    storageBucket: 'note-app-ffa71.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'YOUR-API-KEY',
-    appId: 'YOUR-APP-ID',
-    messagingSenderId: 'YOUR-SENDER-ID',
-    projectId: 'YOUR-PROJECT-ID',
-    storageBucket: 'YOUR-PROJECT-ID.appspot.com',
-    iosClientId: 'YOUR-IOS-CLIENT-ID',
+    apiKey: 'AIzaSyBSvcRCILUXf8YcvVWKTgwzpTxQH7FIUOg',
+    appId: '1:8490898537:ios:37421bd54c46025e8e3ef8',
+    messagingSenderId: '8490898537',
+    projectId: 'note-app-ffa71',
+    storageBucket: 'note-app-ffa71.firebasestorage.app',
     iosBundleId: 'com.example.noteApp',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'YOUR-API-KEY',
     appId: 'YOUR-APP-ID',
