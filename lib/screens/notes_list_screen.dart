@@ -137,8 +137,6 @@ class NotesListScreen extends StatelessWidget {
   // ── Delete confirmation ──────────────────────────────────────────────────
 
   Future<void> _confirmDelete(BuildContext context, NoteModel note) async {
-    final scheme = Theme.of(context).colorScheme;
-
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(

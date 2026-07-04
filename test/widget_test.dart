@@ -1,30 +1,25 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:note_app/main.dart';
+import 'package:note_app/models/note_model.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  group('NoteModel Unit Tests', () {
+    test('copyWith should modify fields correctly', () {
+      final now = DateTime.now();
+      final note = NoteModel(
+        id: '123',
+        title: 'Original Title',
+        description: 'Original Description',
+        createdAt: now,
+        updatedAt: now,
+      );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+      final updatedNote = note.copyWith(title: 'Updated Title');
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+      expect(updatedNote.id, '123');
+      expect(updatedNote.title, 'Updated Title');
+      expect(updatedNote.description, 'Original Description');
+      expect(updatedNote.createdAt, now);
+      expect(updatedNote.updatedAt, now);
+    });
   });
 }
